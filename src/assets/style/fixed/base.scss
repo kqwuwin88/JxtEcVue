@@ -1,0 +1,23 @@
+// 优化显示
+html, body {
+  margin: 0px;
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-size: 14px;
+  color: $color-text-main;
+  #app {
+    @extend %full;
+    
+  }
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+ul,li,ol{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+  }

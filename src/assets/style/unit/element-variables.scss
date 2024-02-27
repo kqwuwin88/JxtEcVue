@@ -1,0 +1,19 @@
+$--color-primary: #409EFF;
+// $--border-radius-base: 0px !default;
+$--border-color-base: #dddddd !default;
+$--color-success: #03ccbb;
+$--table-header-font-color:$--color-primary;
+$--color-text-primary: #2b2b2b !default;
+$--color-text-regular: #878787 !default;
+$--color-text-secondary: #878787 !default;
+$--button-small-font-size: 14px !default;
+$--button-small-padding-vertical: 8px !default;
+$--border-color-base: #d4d5db !default;
+/* $--msgbox-border-radius: 0px !default;
+$--table-text-color: #39393b;
+$--button-small-font-size: 14px !default;
+$--button-small-padding-vertical: 8px !default;
+$--tab-border-line: 1px solid #f0f0f0 !default; */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
