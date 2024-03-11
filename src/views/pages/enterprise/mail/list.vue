@@ -236,7 +236,7 @@ export default {
 				bothDate: '',
 				groupName: '', //显示联系人对应组
 				job: '',
-				status:0,
+				status:1,
 			},
 			dialogGroupForm: {
 				id: '',
