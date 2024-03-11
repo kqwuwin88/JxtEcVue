@@ -71,6 +71,11 @@
 							</el-table-column>
 							<el-table-column label="出生日期" width="" prop="bothDate" show-overflow-tooltip>
 							</el-table-column>
+							<el-table-column label="生日提醒" width="" prop="status" show-overflow-tooltip>
+								<template slot-scope="scope">
+									{{ scope.row.status === 0 ? '否' : '是' }}
+								</template>
+							</el-table-column>
 							<el-table-column label="性别" width="" prop="sex" show-overflow-tooltip>
 								<template slot-scope="scope">
 									{{ scope.row.sex === 0 ? '男' : '女' }}
