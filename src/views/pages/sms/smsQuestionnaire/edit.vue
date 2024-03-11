@@ -163,7 +163,7 @@ export default {
 			}).catch(()=>{})
         },
         showMailDialog(){
-            this.$refs.mailSelect.open({cksCustom:this.cksCustom,cksRows:this.cksRows})
+            this.$refs.mailSelect.open({cksCustom:JSON.parse(JSON.stringify(this.cksCustom)),cksRows:JSON.parse(JSON.stringify(this.cksRows))})
         },
         beforeAvatarUpload(file){
             const excelTypes = ['xls','xlsx','txt']
