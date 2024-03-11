@@ -76,14 +76,14 @@
 									{{ scope.row.status === 0 ? '是' : '否' }}
 								</template>
 							</el-table-column>
-							<el-table-column label="性别" width="" prop="sex" show-overflow-tooltip>
+							<!--<el-table-column label="性别" width="" prop="sex" show-overflow-tooltip>
 								<template slot-scope="scope">
 									{{ scope.row.sex === 0 ? '男' : '女' }}
 								</template>
-							</el-table-column>
+							</el-table-column>-->
 							<el-table-column label="职位" width="160" prop="job" show-overflow-tooltip></el-table-column>
-							<el-table-column label="所属组" width="" prop="groupName" show-overflow-tooltip>
-							</el-table-column>
+							<!--<el-table-column label="所属组" width="" prop="groupName" show-overflow-tooltip>
+							</el-table-column>-->
 							<el-table-column label="操作" width="80" align="left">
 								<template slot-scope="scope">
 									<i class="el-icon-edit-outline row_icon_link" @click="rowChildEdit(scope.row)" v-if="currentNnode !== '0'" title="修改"></i>
