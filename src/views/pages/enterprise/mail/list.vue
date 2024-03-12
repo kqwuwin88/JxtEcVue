@@ -16,7 +16,7 @@
 									<img src="@/assets/imgs/mail_05.png" v-else-if="node.isLeaf" class="tree-img">
 									<img src="@/assets/imgs/mail_06.png" v-else class="tree-img">
 									{{ node.label }}
-									</span>
+								</span>
 								<span class="node-btn" @click.stop>
 									<img src="@/assets/imgs/mail_01.png" @click="appendTreeHandle(data)" title="添加" />
 									<img src="@/assets/imgs/mail_02.png" v-if="node.level !== 1" @click="editTreeHandle(data)" title="修改" />
@@ -563,10 +563,7 @@ export default {
 						},
 						...this.dialogForm
 					}).then(res => {
-						this.$message({
-							message: '操作成功',
-							type: 'success'
-						});
+						
 						this.dialogFormVisible = false;
 						this.queryList(this.currentNnode);
 					}).catch(error => { })
