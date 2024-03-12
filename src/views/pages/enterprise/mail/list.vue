@@ -563,7 +563,10 @@ export default {
 						},
 						...this.dialogForm
 					}).then(res => {
-						
+						this.$message({
+							message: '操作成功',
+							type: 'success'
+						});
 						this.dialogFormVisible = false;
 						this.queryList(this.currentNnode);
 					}).catch(error => { })
