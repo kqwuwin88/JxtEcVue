@@ -17,7 +17,7 @@
                                 <div class="sms_temp_col" @click="rowClick(item)" v-for="item in tableData" :key="item.id" :title="item.content">{{item.content}}</div>
                             </div>
                             <div class="pagination-wrap" flex="main:right">
-                                <vsd-table-pagination :currentPage="page" :pageSize="pageSize" :total="total" @handleChange="handleCurrentChange" layout="total, prev, pager, next"></vsd-table-pagination>
+                                <vsd-table-pagination :currentPage="page" :pageSize="pageSize" :total="total" :pageSize="5" @handleChange="handleCurrentChange" layout="total, prev, pager, next"></vsd-table-pagination>
                             </div>
                         </el-form-item>
                     </el-col>
