@@ -17,7 +17,7 @@
                                 <div class="sms_temp_col" @click="rowClick(item)" v-for="item in tableData" :key="item.id" :title="item.content">{{item.content}}</div>
                             </div>
                             <div class="pagination-wrap" flex="main:right">
-                                <vsd-table-pagination :currentPage="page" :total="total" @handleChange="handleCurrentChange" layout="total, prev, pager, next"></vsd-table-pagination>
+                                <vsd-table-pagination :currentPage="page" :pageSize="pageSize" :pageSizes="pageSizes" :total="total" @handleChange="handleCurrentChange" layout="total, prev, pager, next"></vsd-table-pagination>
                             </div>
                         </el-form-item>
                     </el-col>
@@ -77,6 +77,8 @@ import pagination from '@/mixins/pagination'
 export default {
 	data(){
 		return {
+            pageSize:5,
+            pageSizes:[5],
             dialogTipVisible:false,
             dialogFormImport:false,
             tableData:[],
@@ -141,7 +143,7 @@ export default {
             this.formEdit.templateId = item.id
         },
         queryList(){
-			this.$api.smsTemplateList({status:6,page:this.page,pageSize:5}).then( res => { 
+			this.$api.smsTemplateList({status:6,page:this.page,pageSize:this.pageSize}).then( res => { 
                 this.tableData = res.info
                 this.total = res.total
 			}).catch(error=>{
