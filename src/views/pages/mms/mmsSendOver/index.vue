@@ -74,7 +74,7 @@
                                 <div class="sms_temp_col" @click="rowClick(item)" v-for="item in useList" :key="item.id" :title="item.contentTitle">{{item.contentTitle}}</div>
                             </div>
                             <div class="pagination-wrap" flex="main:right">
-                                <vsd-table-pagination :currentPage="page" :total="total" @handleChange="handleCurrentChange" layout="total, prev, pager, next"></vsd-table-pagination>
+                                <vsd-table-pagination :currentPage="page" :pageSize="pageSize" :pageSizes="pageSizes" :total="total" @handleChange="handleCurrentChange" layout="total, prev, pager, next"></vsd-table-pagination>
                             </div>
                         </el-form-item>
                     </el-col>
@@ -178,6 +178,8 @@ let defaultPage = {
 export default {
 	data(){
 		return {
+            pageSize:8,
+            pageSizes:[8],
             classesVisible:false,
             testVisible:false,
             testForm:{
@@ -193,7 +195,7 @@ export default {
                 sendType:0,
                 sendTime:"",
                 classId:'',
-                status:6,
+                status:'',
             },
             useList:[],
             classList:[],
@@ -353,7 +355,7 @@ export default {
             this.queryList()
         },
         queryList(){
-            this.$api.mmsTemplateList({classId:this.formEdit.classId,status:this.formEdit.status,page:this.page,pageSize:8}).then( res => { 
+            this.$api.mmsTemplateList({classId:this.formEdit.classId,status:this.formEdit.status,page:this.page,pageSize:this.pageSize}).then( res => { 
                  this.useList = res.info
                 this.total = res.total
 			}).catch(error=>{
