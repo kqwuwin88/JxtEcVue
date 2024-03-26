@@ -63,8 +63,7 @@
 						element-loading-spinner="el-icon-loading">
 						<el-table :data="tableData" @selection-change="handleSelectionChange" class="table-border"
 							ref="multipleTable" height="100%">
-							<el-table-column type="selection" width="40px" show-overflow-tooltip>
-							</el-table-column>
+							<el-table-column type="selection" width="50px" align="center" show-overflow-tooltip></el-table-column>
 							<el-table-column label="姓名" width="" prop="c_name" show-overflow-tooltip></el-table-column>
 							<el-table-column label="手机号码" width="" prop="msisdn" show-overflow-tooltip>
 								<!--<template slot-scope="scope">{{scope.row.msisdn? scope.row.msisdn.replace(/(\d{3})\d*(\d{4})/ , '$1****$2'):""}}</template>-->
